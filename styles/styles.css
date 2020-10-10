@@ -54,3 +54,10 @@ body {
   width: 280px;
   height: 280px;
 }
+.tags {
+  padding: 7px;
+  background-color: var(--filter-tablets);
+  color: var(--desaturated-dark-cyan);
+  font-weight: bold;
+  border-radius: 5px;
+}
