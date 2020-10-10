@@ -60,4 +60,11 @@ body {
   color: var(--desaturated-dark-cyan);
   font-weight: bold;
   border-radius: 5px;
+  transition: color, background-color 0.3s ease-in;
+  font-size: 0.9rem;
+  will-change: auto;
+}
+.tags:hover {
+  color: var(--white);
+  background-color: var(--desaturated-dark-cyan);
 }
