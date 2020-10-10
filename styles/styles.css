@@ -68,10 +68,26 @@ body {
   color: var(--white);
   background-color: var(--desaturated-dark-cyan);
 }
+.job-author {
+  display: flex;
+  border: var(--pruebas);
+  justify-content: flex-start;
+  align-items: center;
+}
 .job-status {
-  padding: 5px 10px;
+  padding: 4px 10px;
   background-color: var(--desaturated-dark-cyan);
   border-radius: 25px;
   font-size: 1rem;
   font-weight: bold;
+}
+.job-status:nth-child(2) {
+  margin-left: 15px;
+}
+.job-status:nth-child(3) {
+  margin-left: 5px;
+}
+.company-name {
+  font-size: 0.8rem;
+  color: var(--desaturated-dark-cyan);
 }
