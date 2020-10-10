@@ -91,3 +91,7 @@ body {
   font-size: 0.8rem;
   color: var(--desaturated-dark-cyan);
 }
+.job-title {
+  font-size: 0.9em;
+  font-weight: 800;
+}
