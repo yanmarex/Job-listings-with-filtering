@@ -29,7 +29,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: lightslategray;
+  background: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,4 +94,23 @@ body {
 .job-title {
   font-size: 0.9em;
   font-weight: 800;
+}
+.job-location-date {
+  display: flex;
+  border: var(--pruebas);
+  justify-content: space-between;
+  width: 96%;
+}
+.location-items {
+  color: var(--dark-grayish-cyan);
+  font-size: 0.9rem;
+}
+.job-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border: var(--pruebas);
 }
