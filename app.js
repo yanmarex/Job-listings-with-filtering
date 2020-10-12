@@ -74,6 +74,14 @@ fetch(jobs)
         aTags.textContent = item;
         jobCardTags.appendChild(aTags);
       });
+      //
+      let tools = list.tools;
+      tools.forEach((tool) => {
+        const aTags = document.createElement("a");
+        aTags.setAttribute("class", "tags");
+        aTags.textContent = tool;
+        jobCardTags.appendChild(aTags);
+      });
     });
   })
   .catch((err) => {
