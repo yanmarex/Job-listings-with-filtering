@@ -8,22 +8,22 @@ fetch(jobs)
   })
   .then((data) => {
     data.forEach((list) => {
-      //Crear contenedor para cada articulo.
+      //
       const container = document.createElement("article");
       container.setAttribute("class", "job-card");
       app.appendChild(container);
-      //Aplicar los logos a cada articulo
+      //
       const jobCardImage = document.createElement("div");
       jobCardImage.setAttribute("class", "job-card-image");
       const jobCardImageChild = document.createElement("img");
       jobCardImageChild.src = `${list.logo}`;
       jobCardImage.appendChild(jobCardImageChild);
       container.appendChild(jobCardImage);
-      //Crear y pegar el div de description
+      //
       const jobCardDescription = document.createElement("div");
       jobCardDescription.setAttribute("class", "job-card-description");
       container.appendChild(jobCardDescription);
-      //Pegar el author to
+      //
       const jobAuthor = document.createElement("div");
       jobAuthor.setAttribute("class", "job-author");
       jobCardDescription.appendChild(jobAuthor);
@@ -33,12 +33,24 @@ fetch(jobs)
       h3.textContent = list.company;
       jobAuthor.appendChild(h3);
       //
-      const aStatus = document.createElement("a");
-      aStatus.setAttribute("class", "job-status");
-      aStatus.textContent = list.new;
-      aStatus.textContent = list.featured;
-      jobAuthor.appendChild(aStatus);
+
+      let newBadge = list.new;
+      let featuredBadge = list.featured;
+
+      if (newBadge === true) {
+        const aStatus = document.createElement("a");
+        aStatus.setAttribute("class", "job-status");
+        aStatus.textContent = "New!";
+        jobAuthor.appendChild(aStatus);
+      }
       //
+      if (featuredBadge === true) {
+        const aStatus = document.createElement("a");
+        aStatus.setAttribute("class", "job-status");
+        aStatus.textContent = "Feature";
+        jobAuthor.appendChild(aStatus);
+      }
+
       const jobHeader = document.createElement("div");
       jobHeader.setAttribute("class", "job-header");
       container.appendChild(jobHeader);
@@ -82,6 +94,18 @@ fetch(jobs)
         aTags.textContent = tool;
         jobCardTags.appendChild(aTags);
       });
+      //
+      let role = list.role;
+      let level = list.level;
+
+      const createTags = (tag) => {
+        const aTags = document.createElement("a");
+        aTags.setAttribute("class", "tags");
+        aTags.textContent = tag;
+        jobCardTags.appendChild(aTags);
+      };
+      createTags(level);
+      createTags(role);
     });
   })
   .catch((err) => {
