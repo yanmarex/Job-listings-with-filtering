@@ -76,6 +76,7 @@ img {
   font-size: 0.9rem;
   will-change: auto;
   cursor: pointer;
+  margin: 5px 0px;
 }
 .tags:hover {
   color: var(--white);
