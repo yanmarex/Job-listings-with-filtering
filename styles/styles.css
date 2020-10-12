@@ -128,5 +128,12 @@ img {
   align-items: center;
   height: 100px;
   width: 100%;
-  border: var(--pruebas);
+}
+.job-card-image {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  position: absolute;
+  top: -23px;
+  left: 15px;
 }
