@@ -60,7 +60,8 @@ img {
   width: 320px;
   height: 280px;
   border-radius: 5px;
-  transition: border-left 0.3s ease-in-out;
+  box-shadow: 8px 4px 29px 6px hsl(180deg 15% 74%);
+  position: relative;
 }
 .job-card:hover {
   border-left: 6px solid var(--very-dark-grayish-cyan);
