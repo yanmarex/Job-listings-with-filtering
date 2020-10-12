@@ -12,6 +12,11 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
 }
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 :root {
   /*Primary colors*/
   --desaturated-dark-cyan: hsl(180, 29%, 50%);
